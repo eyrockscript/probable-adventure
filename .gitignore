@@ -37,3 +37,4 @@ out/
 .vscode/
 
 .serverless
+.DS_Store
