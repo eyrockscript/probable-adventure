@@ -1,0 +1,20 @@
+service: simple-lambda
+
+frameworkVersion: '2 || 3'
+
+
+provider:
+  name: aws
+  region: us-west-2
+  runtime: nodejs12.x
+  endpointType: REGIONAL
+  lambdaHashingVersion: 20201221
+
+functions:
+  hello:
+    handler: handler.hello
+    events:
+      - http:
+          path: hello
+          method: get
+          cors: true
